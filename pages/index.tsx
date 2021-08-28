@@ -4,10 +4,16 @@ import Link from "next/link";
 import { client } from "../libs/client";
 import { GetStaticProps } from 'next';
 
+export type Category = {
+    name: string;
+}
+
 export type Blog = {
     id: string;
     title: string;
     body: string;
+    publishedAt: string;
+    category: Category;
 }
 
 type Props = {
